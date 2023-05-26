@@ -121,10 +121,10 @@ func makeRecordCodec(st map[string]*Codec, enclosingNamespace string, schemaMap 
 			}
 
 			// attempt to encode default value using codec
-			_, err = fieldCodec.binaryFromNative(nil, defaultValue)
-			if err != nil {
-				return nil, fmt.Errorf("Record %q field %q: default value ought to encode using field schema: %s", c.typeName, fieldName, err)
-			}
+			//_, err = fieldCodec.binaryFromNative(nil, defaultValue)
+			//if err != nil {
+			//	return nil, fmt.Errorf("Record %q field %q: default value ought to encode using field schema: %s", c.typeName, fieldName, err)
+			//}
 			defaultValueFromName[fieldName] = defaultValue
 		}
 
